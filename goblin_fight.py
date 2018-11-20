@@ -11,7 +11,8 @@ import random
 # os.system() will take any linux command
 # and if python can run it, it will
 
-print"""         ___ . .  _                                                                                             
+print        """        
+                 ___ . .  _                                                                                             
         "T$$$P"   |  |_| |_                                                                                             
          :$$$     |  | | |_                                                                                             
          :$$$                                                      "T$$$$$$$b.                                          
