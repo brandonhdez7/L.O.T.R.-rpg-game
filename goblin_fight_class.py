@@ -4,7 +4,11 @@ from Goblin import Goblin
 from Orcs import Orc
 from random import randint
 from time import sleep
-from Weapons import Weapons
+
+
+weapons = [{"name": "sword", "power": 7},{"name": "bow arrow", "power": 6}, {"name": "axe", "power": 8}]
+
+
 
 
 
@@ -140,14 +144,20 @@ while(theHero.is_alive()):
             monster.take_damage(theHero.power)
             print "You have done %d damage to the monster!" % theHero.power
         elif user_input == "2":
-            user_input = raw_input("choose weapon? ")
-            theHero.health += weapon
-            print"""    Inventory
-                        1. sword
-                        2. bow arrow
-                        3. axe
-                        4. poison
-                """
+            weapon_number = 0
+            for weapon in weapons: 
+                weapon_number += 1
+                print "%d. %s" %  (weapon_number, weapon["name"])
+                
+            user_input = int(raw_input("choose weapon? "))
+
+            theHero.weapon = weapons[user_input - 1]
+            theHero.power += weapons[user_input - 1]["power"]
+
+            
+
+            
+            
             print "Your power is now %d" % theHero.power
         elif user_input == "3":
             print "Retreat!! Call for elves help %s" % theHero.name
