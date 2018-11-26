@@ -182,6 +182,6 @@ while(theHero.is_alive()):
             print "%s has gone into a rage as death appraoches. Power increased!" % theHero.name
             theHero.power += 5
         raw_input("Hit enter to conntinue")
-        os.system("clear") 
+        os.system("clear")
 
     
